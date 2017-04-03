@@ -99,12 +99,8 @@ function formReset(){
 
 //ANIMATED DIV METHOD
 function sendSuccessfully(){
-  $("#success_result").removeClass("hidden").animate({
-      opacity: 0.9,
-      width: "+=200"
-  },
-    duration: "slow"
-  );
+  $("#success_result").removeClass("hidden").animate({left: "250px"}, "slow"
+);
 };
 
 //"NICE" method for returning UPPERCASE string

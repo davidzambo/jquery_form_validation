@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form validation script</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>FORM VALIDATION</p>
+    <form id="user_form" action="">
+    <table>
+      <tr>
+        <td></td>
+        <td>
+          <p class="hidden" id="error_field"><p>
+        </td>
+      </tr>
+      <tr>
+        <td>Név:</td>
+        <td class="name"><input type="text" name="name" id="name">
+        <p id="name_error" class="error_message hidden">HIBÁS NÉV!</p>
+        </td>
+      </tr>
+      <tr>
+        <td>E-mail:</td>
+        <td class="email"><input type="email" name="email" id="email">
+        <p id="email_error" class="error_message hidden">HIBÁS E-MAIL CÍM!</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Telefonszám:</td>
+        <td class="phonenumber"><input type="tel" name="phonenumber" id="phonenumber">
+        <p id="phonenumber_error" class="error_message hidden">HIBÁS TELEFONSZÁM!</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Bemutatkozás:</td>
+        <td><textarea name="introduction" id="introduction"></textarea>
+        <p id="introduction_error" class="error_message hidden">HIBÁS BEMUTATKOZÁS!</p>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td id="buttons">
+          <button type="submit" id="submit">Küldés</button>
+        </td>
+    </table>
+  </form>
+
+  <script src="script_validation.js"></script>
+
+  </body>
+</html>

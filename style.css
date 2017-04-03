@@ -1,0 +1,37 @@
+body {
+  background-color: #ffffff;
+  color: black;
+}
+
+table,tr,td {
+  padding: 5px;
+  text-align: right;
+}
+
+table {
+  margin: 0 auto;
+}
+
+input, textarea {
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 250px;
+}
+
+textarea{
+  height: 300px;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.error_message {
+  color: red;
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}

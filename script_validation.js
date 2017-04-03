@@ -80,6 +80,7 @@ function isIntroductionValid(){
   };
 };
 
+
 //SHOW INPUT ELEMENT NUMBER METHOD
 function inputElementNumber(){
   var elementNumber = $("input, textarea, button").length;
@@ -95,15 +96,20 @@ function formReset(){
   $("#user_form")[0].reset();
 };
 
-//ANIMATED DIV METHOD
 
+//ANIMATED DIV METHOD
 function sendSuccessfully(){
-  $("success_result").removeClass("hidden").animate({
-      opacity: 0.5,
+  $("#success_result").removeClass("hidden").animate({
+      opacity: 0.9,
       width: "+=200"
   },
     duration: "slow"
   );
+};
+
+//"NICE" method for returning UPPERCASE string
+String.prototype.nice = function(){
+    return this.toUpperCase();
 };
 
 var isAjaxReadyFlag = false;

@@ -97,9 +97,14 @@ function formReset(){
 
 //ANIMATED DIV METHOD
 
-function animatedDiv(){
-
-}
+function sendSuccessfully(){
+  $("success_result").removeClass("hidden").animate({
+      opacity: 0.5,
+      width: "+=200"
+  },
+    duration: "slow"
+  );
+};
 
 var isAjaxReadyFlag = false;
 var isInputElementNumberLoggedFlag = false;
@@ -125,15 +130,20 @@ if (isNameValid() && isEmailValid() && isPhoneNumberValid() && isIntroductionVal
       success: function(){
         isAjaxReadyFlag = true;
       },
+//show error messages is a return div
       error: function(result) {
         $("#error_field").html(result).removeClass("hidden");
+      },
+//if the input element number method is ready and the flag is true, start the
+//successful div method. If not ready, waits 3 seconds, and try again
+      complete: function(){
+        if (isInputElementNumberLoggedFlag) {
+          sendSuccessfully();
+        } else {
+          setTimeout(sendSuccessfully(),3000);
+        };
       }
     });
-
-
-    if (isAjaxReadyFlag && isInputElementNumberLoggedFlag){
-      animatedDiv();
-    };
 };
 
 return this;

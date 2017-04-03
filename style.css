@@ -3,7 +3,23 @@ body {
   color: black;
 }
 
-table,tr,td {
+.title {
+  color: green;
+  text-align: center;
+}
+
+#success_result {
+  background-color: rgba(0,255,0,1);
+  width: 200px;
+  height: 25px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 25px 25px 25px 25px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+td {
   padding: 5px;
   text-align: right;
 }
